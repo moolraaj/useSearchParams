@@ -30,3 +30,14 @@ function page({params}) {
 
 export default page
 
+export async function generateStaticParams(){
+  let resp=await loadPost()
+  return resp.map((ele)=>{
+    return{
+      slug:ele.place,
+      slug:ele.id.toString(),
+      slug:ele.key
+    }
+
+  })
+}

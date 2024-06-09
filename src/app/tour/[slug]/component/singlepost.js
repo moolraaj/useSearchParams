@@ -26,7 +26,7 @@ const TourPage = () => {
 
   useEffect(()=>{
     fetchPageDetails()
-  },[])
+  },[fetchPageDetails])
 
   console.log(post)
  
